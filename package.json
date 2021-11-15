@@ -1,0 +1,20 @@
+{
+  "name": "demotypescriptpoo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app": "tsc && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nawellgzl/DemoTypescriptPOO.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nawellgzl/DemoTypescriptPOO/issues"
+  },
+  "homepage": "https://github.com/nawellgzl/DemoTypescriptPOO#readme"
+}
