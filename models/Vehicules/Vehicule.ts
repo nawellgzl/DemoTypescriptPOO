@@ -1,16 +1,27 @@
 import {Moteur} from "../Moteurs/Moteur";
+import {StationEssence} from "../StationEssence/StationEssence";
 
 export class Vehicule {
     private _marque: string;
     private _couleur: string;
     private _prix: number;
-    private moteur: Moteur;
+    private _moteur: Moteur;
 
     constructor(marque: string, couleur: string, prix: number, moteur: Moteur) {
         this._marque = marque;
         this._couleur = couleur;
         this._prix = prix;
-        this.moteur = moteur;
+        this._moteur = moteur;
+    }
+
+    faireLePleinEssence = (station : StationEssence, nbLitre: number) => {
+        let prix = nbLitre * station.PrixEssence;
+        console.log(`${this.marque} a payé ${prix}€ pour ${nbLitre}L d'essence `)
+    }
+
+    faireLePleinDiesel = (station : StationEssence, nbLitre: number) => {
+        let prix = nbLitre * station.PrixDiesel;
+        console.log(`${this.marque} a payé ${prix}€ pour ${nbLitre}L de Diesel `)
     }
 
     get marque(): string {
@@ -35,6 +46,14 @@ export class Vehicule {
 
     set prix(value) {
         this._prix = value;
+    }
+
+    get moteur(): Moteur{
+        return this._moteur;
+    }
+
+    set moteur(value) {
+        this._moteur = value;
     }
 
 }
