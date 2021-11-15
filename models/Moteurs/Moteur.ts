@@ -19,7 +19,7 @@ export class Moteur {
         return this._km;
     }
 
-    set km(value) {
+    set km(value: number) {
         this._km = value;
     }
 }
